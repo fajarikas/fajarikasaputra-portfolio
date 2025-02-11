@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted, ref } from "vue";
+import $ from "jquery";
 
 const userName = ref("Fajar Ika Saputra");
 const userJob = ref("A Curious Web Developer & UI/UX Designer");
