@@ -10,9 +10,7 @@
               <img src="../../public/img/placeholders/3-4.jpg" alt="" />
               <div
                 class="main layer"
-                style="
-                  background-image: url('../../public/img/about/profile.jpg');
-                "
+                style="background-image: url(/img/about/profile.jpg)"
                 data-depth="0.04"
               ></div>
             </div>
