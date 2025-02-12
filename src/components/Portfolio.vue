@@ -1,4 +1,50 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+
+const projects = [
+  {
+    img: "/img/portfolio/tcuny.jpg",
+    title: "Educational Resillience",
+    type: "Web Development",
+    link: "https://www.tcuny.com/",
+    view: 1,
+  },
+  {
+    img: "/img/portfolio/fitacademy.jpg",
+    title: "FitAcademy",
+    type: "Web Development",
+    link: "https://www.fitacademy.id/",
+    view: 1,
+  },
+  {
+    img: "/img/portfolio/padangbaru.jpg",
+    title: "Wesite Desa Padang Baru",
+    type: "Web Development",
+    link: "https://www.desa-padangbaru.vercel.app/",
+    view: 1,
+  },
+  {
+    img: "/img/portfolio/ruangtemu.png",
+    title: "Ruang Temu Apps",
+    type: "UI/UX Design",
+    view: 2,
+  },
+  {
+    img: "/img/portfolio/quiz.png",
+    title: "Quiz App",
+    type: "UI/UX Design",
+    view: 2,
+  },
+  {
+    img: "/img/portfolio/katar.png",
+    title: "Logo Karang Taruna Desa Padang Baru",
+    type: "Logo Design",
+    view: 2,
+  },
+];
+
+// console.log(projects);
+</script>
 
 <template>
   <div class="grax_tm_section" id="portfolio">
@@ -9,169 +55,38 @@
         </div>
         <div class="portfolio_list">
           <ul class="gallery_zoom my_waypoint">
-            <li class="wow fadeInLeft" data-wow-duration="1.5s">
-              <div class="list_inner">
-                <div class="image">
-                  <img src="../../public/img/placeholders/1-1.jpg" alt="" />
-                  <div
-                    class="main"
-                    style="background-image: url(/img/portfolio/tcuny.jpg)"
-                  ></div>
-                </div>
-                <div class="overlay"></div>
-                <div class="details">
-                  <!-- <div class="w-full flex items-center justify-center">
-                        <img
-                          class="opacity-100 bottom-10 w-[60%] relative justify-center mx-auto"
-                          src="../../public/img/logo/eruny.png"
-                          alt=""
-                        />
-                      </div> -->
-                  <h3>Educational Resillience</h3>
-                  <span>Adaptive MOOC</span>
-                </div>
-                <a
-                  class="grax_tm_full_link"
-                  href="https://www.tcuny.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                ></a>
-              </div>
-            </li>
             <li
+              v-for="(project, index) in projects"
+              :key="index"
               class="wow fadeInLeft"
               data-wow-duration="1.5s"
-              data-wow-delay=".2s"
             >
               <div class="list_inner">
                 <div class="image">
                   <img src="../../public/img/placeholders/1-1.jpg" alt="" />
                   <div
                     class="main"
-                    style="background-image: url(/img/portfolio/fitacademy.jpg)"
+                    :style="{ backgroundImage: `url(${project.img})` }"
                   ></div>
                 </div>
                 <div class="overlay"></div>
                 <div class="details">
-                  <!-- <div
-                        class="w-full flex items-center mx-auto justify-center"
-                      >
-                        <img
-                          class="opacity-100 bottom-10 w-[60%] justify-center mx-auto"
-                          src="../../public/img/logo/Fit-Academy-Logo.webp"
-                          alt=""
-                        />
-                      </div> -->
-                  <h3>FitAcademy</h3>
-                  <span>E-Learning Website</span>
+                  <h3>{{ project.title }}</h3>
+                  <span>{{ project.type }}</span>
                 </div>
-                <a
-                  class="grax_tm_full_link"
-                  href="https://www.fitacademy.id/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                ></a>
-              </div>
-            </li>
-            <li
-              class="wow fadeInLeft"
-              data-wow-duration="1.5s"
-              data-wow-delay=".4s"
-            >
-              <div class="list_inner">
-                <div class="image">
-                  <img src="../../public/img/placeholders/1-1.jpg" alt="" />
-                  <div
-                    class="main"
-                    style="background-image: url(/img/portfolio/padangbaru.jpg)"
-                  ></div>
+                <div v-if="project.view === 1">
+                  <a
+                    class="grax_tm_full_link"
+                    :href="project?.link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                  </a>
                 </div>
-                <div class="overlay"></div>
-                <div class="details">
-                  <!-- <div class="w-full flex items-center justify-center">
-						  <img
-							class="opacity-100 bottom-10 w-[60%] relative justify-center mx-auto"
-							src="../../public/img/logo/eruny.png"
-							alt=""
-						  />
-						</div> -->
-                  <h3>Wesite Desa Padang Baru</h3>
-                  <span>Organization Website Profile</span>
+
+                <div v-if="project.view === 2">
+                  <a class="grax_tm_full_link zoom" :href="project.img"> </a>
                 </div>
-                <a
-                  class="grax_tm_full_link"
-                  href="https://padang-baru-frontend.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                ></a>
-              </div>
-            </li>
-            <li class="wow fadeInLeft" data-wow-duration="1.5s">
-              <div class="list_inner">
-                <div class="image">
-                  <img src="../../public/img/placeholders/1-1.jpg" alt="" />
-                  <div
-                    class="main"
-                    style="background-image: url(/img/portfolio/ruangtemu.png)"
-                  ></div>
-                </div>
-                <div class="overlay"></div>
-                <div class="details">
-                  <h3>Ruang Temu Apps</h3>
-                  <span>Mobile App Design for Organization</span>
-                </div>
-                <a
-                  class="grax_tm_full_link zoom"
-                  href="../../public/img/portfolio/ruangtemu.png"
-                ></a>
-              </div>
-            </li>
-            <li
-              class="wow fadeInLeft"
-              data-wow-duration="1.5s"
-              data-wow-delay=".2s"
-            >
-              <div class="list_inner">
-                <div class="image">
-                  <img src="../../public/img/placeholders/1-1.jpg" alt="" />
-                  <div
-                    class="main"
-                    style="background-image: url(/img/portfolio/quiz.png)"
-                  ></div>
-                </div>
-                <div class="overlay"></div>
-                <div class="details">
-                  <h3>Quiz App</h3>
-                  <span>Quiz Learning App</span>
-                </div>
-                <a
-                  class="grax_tm_full_link zoom"
-                  href="../../public/img/portfolio/quiz.png"
-                ></a>
-              </div>
-            </li>
-            <li
-              class="wow fadeInLeft"
-              data-wow-duration="1.5s"
-              data-wow-delay=".4s"
-            >
-              <div class="list_inner">
-                <div class="image">
-                  <img src="../../public/img/placeholders/1-1.jpg" alt="" />
-                  <div
-                    class="main"
-                    style="background-image: url(/img/portfolio/katar.png)"
-                  ></div>
-                </div>
-                <div class="overlay"></div>
-                <div class="details">
-                  <h3>Logo Karang Taruna Desa Padang Baru</h3>
-                  <span>Organization Logo</span>
-                </div>
-                <a
-                  class="grax_tm_full_link zoom"
-                  href="../../public/img/portfolio/katar.png"
-                ></a>
               </div>
             </li>
           </ul>
