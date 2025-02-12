@@ -54,7 +54,10 @@ onMounted(() => {
 <template>
   <div class="grax_tm_hero" id="home">
     <div class="bg">
-      <div class="image" data-img-url="./img/slider/background.png"></div>
+      <div
+        class="image"
+        style="background-image: url(/img/slider/background.png)"
+      ></div>
       <div class="overlay"></div>
     </div>
     <div class="content">
