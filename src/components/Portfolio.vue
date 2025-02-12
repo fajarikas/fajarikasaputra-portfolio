@@ -15,7 +15,7 @@
                   <img src="../../public/img/placeholders/1-1.jpg" alt="" />
                   <div
                     class="main"
-                    data-img-url="../../public/img/portfolio/tcuny.jpg"
+                    style="background-image: url(/img/portfolio/tcuny.jpg)"
                   ></div>
                 </div>
                 <div class="overlay"></div>
@@ -48,7 +48,7 @@
                   <img src="../../public/img/placeholders/1-1.jpg" alt="" />
                   <div
                     class="main"
-                    data-img-url="../../public/img/portfolio/fitacademy.jpg"
+                    style="background-image: url(/img/portfolio/fitacademy.jpg)"
                   ></div>
                 </div>
                 <div class="overlay"></div>
@@ -83,7 +83,7 @@
                   <img src="../../public/img/placeholders/1-1.jpg" alt="" />
                   <div
                     class="main"
-                    data-img-url="../../public/img/portfolio/padangbaru.jpg"
+                    style="background-image: url(/img/portfolio/padangbaru.jpg)"
                   ></div>
                 </div>
                 <div class="overlay"></div>
@@ -112,7 +112,7 @@
                   <img src="../../public/img/placeholders/1-1.jpg" alt="" />
                   <div
                     class="main"
-                    data-img-url="../../public/img/portfolio/ruangtemu.png"
+                    style="background-image: url(/img/portfolio/ruangtemu.png)"
                   ></div>
                 </div>
                 <div class="overlay"></div>
@@ -136,7 +136,7 @@
                   <img src="../../public/img/placeholders/1-1.jpg" alt="" />
                   <div
                     class="main"
-                    data-img-url="../../public/img/portfolio/quiz.png"
+                    style="background-image: url(/img/portfolio/quiz.png)"
                   ></div>
                 </div>
                 <div class="overlay"></div>
@@ -160,7 +160,7 @@
                   <img src="../../public/img/placeholders/1-1.jpg" alt="" />
                   <div
                     class="main"
-                    data-img-url="../../public/img/portfolio/katar.png"
+                    style="background-image: url(/img/portfolio/katar.png)"
                   ></div>
                 </div>
                 <div class="overlay"></div>
