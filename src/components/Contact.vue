@@ -1,4 +1,16 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+
+let name = ref("");
+let email = ref("");
+let msg = ref("");
+
+const handleSubmit = () => {
+  console.log(name.value);
+  console.log(email.value);
+  console.log(msg.value);
+};
+</script>
 
 <template>
   <div class="grax_tm_contact" id="contact">
@@ -106,6 +118,12 @@
           data-wow-delay=".2s"
         >
           <div class="fields">
+            <!-- <form
+              action="/"
+              method="post"
+              class="contact_form"
+              id="contact_form"
+            > -->
             <form
               action="/"
               method="post"
@@ -133,7 +151,13 @@
                 <textarea id="message" placeholder="Message"></textarea>
               </div>
               <div class="grax_tm_button">
-                <a id="send_message" href="#">Send Message</a>
+                <a
+                  type="submit"
+                  id="send_message"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Send Message</a
+                >
               </div>
 
               <!-- If you want to change mail address to yours, please open modal.php and go to line 4 -->

@@ -1,6 +1,4 @@
 <script setup>
-import { ref } from "vue";
-
 const projects = [
   {
     img: "/img/portfolio/tcuny.jpg",
@@ -42,8 +40,6 @@ const projects = [
     view: 2,
   },
 ];
-
-// console.log(projects);
 </script>
 
 <template>
