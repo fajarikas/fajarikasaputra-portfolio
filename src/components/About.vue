@@ -75,7 +75,7 @@
               </ul>
             </div>
             <div class="grax_tm_button">
-              <a href="../../public/docs/CV_Fajar Ika Saputra_.pdf" download
+              <a href="/docs/CV_Fajar%20Ika%20Saputra_.pdf" download
                 >Download CV</a
               >
             </div>
